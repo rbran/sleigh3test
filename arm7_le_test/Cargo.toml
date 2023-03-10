@@ -1,0 +1,11 @@
+[package]
+name = "arm7_le_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arm7_le = { path = "../../sleigh3rust/arm7_le" }
+sleigh4rust = { path = "../../sleigh4rust" }
+arm_lib = { path = "../arm_lib" }

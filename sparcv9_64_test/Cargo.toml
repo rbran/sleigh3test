@@ -1,0 +1,12 @@
+[package]
+name = "sparcv9_64_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sparcv9_64 = { path = "../../sleigh3rust/sparcv9_64" }
+sleigh4rust = { "path" = "../../sleigh4rust"}
+serde = { version = "1", features = ["derive"] }
+csv = "1"

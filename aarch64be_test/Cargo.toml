@@ -1,0 +1,10 @@
+[package]
+name = "aarch64be_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aarch64be = { path = "../../sleigh3rust/aarch64be" }
+aarch64_lib = { path = "../aarch64_lib" }

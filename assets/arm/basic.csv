@@ -1,0 +1,67 @@
+min_version,max_version,addr,instruction_type,instruction_value,result
+V4,V8,0,Arm,3844988932,"str lr,[sp,#-0x4]!"
+V4,V8,0,Arm,3844244448,"str r8,[r2,#-0x3e0]!"
+V4,V8,0,Arm,235078385,"mcreq p2,0x0,r0,cr3,cr1,0x7"
+V4,V8,0,Arm,3818913792,"mov r0,#0x0"
+V4,V8,0,Arm,3888197634,"strb r3,[r1,r2]"
+V4,V8,0,Arm,3802202114,"adc r0,r1,#0x2"
+V4,V8,0,Arm,3768647682,"adc r0,r1,r2"
+V4,V8,0,Arm,3768582433,"adc r0,r0,r1, lsr #0x2"
+V4,V8,0,Arm,3769631009,"adcs r0,r0,r1, lsr #0x2"
+V4,V8,0,Arm,3768648498,"adc r0,r1,r2, lsr r3"
+V4,V8,0,Arm,3768647970,"adc r0,r1,r2, lsr #0x2"
+V4,V8,0,Arm,1347379557,"subpl r6,pc,r5, ror #0x2"
+V4,V8,0,Arm,3847434288,"ldrb r3,[r3,#-0x30]"
+V4,V8,0,Arm,3789492406,"ldrh r1,[0xe]"
+V4,V8,0,Arm,4020174850,swi 0x9f0002
+V4,V8,0,Arm,3785364242,"mov r1,r2, lsl r3"
+V4,V8,0,Arm,3785363842,"mov r1,r2, lsl #0x3"
+V4,V8,0,Arm,3809607682,"tst r2,#0x2"
+V4,V8,0,Arm,3785364049,"mov r1,r1, asr r2"
+V4,V8,0,Arm,4005093491,"mrc p0,0x5,lr,cr8,cr3,0x3"
+V4,V8,0,Arm,3912065027,"stmdb sp!,{r0,r1,sp,lr}"
+V4,V8,0,Arm,3788648660,"ldrsb r3,[r2,#0x4]"
+V4,V8,0,Arm,3904708608,"ldmia sp!,{sp}"
+V4,V8,0,Arm,3904741376,"ldmia sp!,{sp,pc}"
+V4,V8,0,Arm,918672,"muleq lr,r0,r4"
+V4,V8,0,Arm,3781103798,"ldrh r1,[0x2]"
+V4,V8,0,Arm,3782213889,"cmn r0,r1, lsl #0x2"
+V4,V8,0,Arm,3813867520,"cmp r3,#0x0"
+V4,V8,0,Arm,3657433091,ble 0x14
+V4,V8,0,Arm,3818930416,"mov r4,#0xf0"
+V4,V8,0,Arm,3768582145,"adc r0,r0,r1"
+V4,V8,0,Arm,3928473600,b 0x9f0008
+V4,V8,0,Thumb16,56584,ble 0x14
+V4,V8,0,Thumb16,18176,bx r0
+V4,V8,0,Thumb16,18184,bx r1
+V4,V8,0,Thumb16,18192,bx r2
+V4,V8,0,Thumb16,18288,bx lr
+V4,V8,0,Thumb16,9456,"mov r4,#0xf0"
+V5,V8,0,Arm,3657433091,ble 0x14
+V5,V8,0,Arm,3778019088,bx r0
+V5,V8,0,Arm,3778019089,bx r1
+V5,V8,0,Arm,3778019090,bx r2
+V5,V8,0,Arm,3778019102,bx lr
+V5,V8,0,Arm,3818930416,"mov r4,#0xf0"
+V4,V5,0,Arm,3785408512,"mov r12,r0"
+V6,V8,0,Arm,3785408512,"cpy r12,r0"
+V6,V8,0,Arm,3874426994,"uxtb r1,r2"
+V6,V8,0,Arm,4004973280,"vcvt.f64.f32 d0,s1"
+V6,V8,0,Arm,3784380319,"ldrex r0,[r1]"
+V6,V8,0,Arm,3869311090,"sxtab r0,r1,r2"
+V6,V8,0,Arm,3867214354,"pkhbt r0,r1,r2, lsl #0x4"
+V6,V8,0,Arm,3869245458,"ssat r0, #0x1, r2"
+V6,V8,0,Arm,3787587792,"ldrd r0,r1,[r2,#0x0]"
+V6,V8,0,Arm,4124110856,"pld [r0,#0x8]"
+V6,V8,0,Arm,3971779344,"vldmia r12!,{d8,d9,d10,d11,d12,d13,d14,d15}"
+V6,V8,0,Arm,4043375104,setend BE
+V6,V8,0,Arm,33012,"strdeq r8,r9,[r0],-r4"
+V6,V8,0,Thumb16,48906,itet eq
+V6,V8,0,Thumb32,3946840065,"adc.w r0,r0,r1"
+V6,V8,0,Thumb32,4047503368,"adc r0,r0,#0x8"
+V6,V8,0,Thumb32,4160749566,bl 0x0
+V7,V8,0,Arm,4095739407,"vld1.8 {d0,d1,d2},[r0]"
+V7,V8,0,Arm,4099948687,"vld4.32 {d20,d21,d22,d23},[r0]"
+V7,V8,0,Arm,4068738640,"vmov.i32 q0,simdExpand(0x0,0x6,0x40)"
+V7,V8,0,Arm,4118802523,dmb ISH
+V8,V8,0,Arm,4072541969,"vcvt.s32.f32 d0,d1,#0x2"

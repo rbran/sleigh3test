@@ -1,0 +1,5 @@
+addr,token,result
+0,2563,"GOTO 0x3"
+1,2563,"GOTO 0x3"
+2,2563,"GOTO 0x3"
+3,3087,"MOVLW #0xf"
