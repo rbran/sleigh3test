@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 sparcv9_32 = { path = "../../sleigh3rust/sparcv9_32" }
-sleigh4rust = { "path" = "../../sleigh4rust"}
+sleigh4rust = "0.1"
 serde = { version = "1", features = ["derive"] }
 csv = "1"

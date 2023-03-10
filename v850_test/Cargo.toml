@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 v850 = { path = "../../sleigh3rust/v850" }
-sleigh4rust = { "path" = "../../sleigh4rust"}
+sleigh4rust = "0.1"
 csv = "1"
 serde = { version = "1.0.154", features = ["derive"] }

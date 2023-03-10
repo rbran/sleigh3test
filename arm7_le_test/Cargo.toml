@@ -7,5 +7,5 @@ edition = "2021"
 
 [dependencies]
 arm7_le = { path = "../../sleigh3rust/arm7_le" }
-sleigh4rust = { path = "../../sleigh4rust" }
+sleigh4rust = "0.1"
 arm_lib = { path = "../arm_lib" }
