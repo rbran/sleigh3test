@@ -8,4 +8,4 @@ edition = "2021"
 [dependencies]
 superh4_be = { path = "../../sleigh3rust/superh4_be" }
 superh4_lib = { path = "../superh4_lib" }
-sleigh4rust = "0.1"
+sleigh4rust = { path = "../../sleigh4rust", version = "0.1" }
