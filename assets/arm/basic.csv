@@ -29,6 +29,8 @@ V4,V8,0,Arm,3782213889,"cmn r0,r1, lsl #0x2"
 V4,V8,0,Arm,3813867520,"cmp r3,#0x0"
 V4,V8,0,Arm,3657433091,ble 0x14
 V4,V8,0,Arm,3818930416,"mov r4,#0xf0"
+V4,V5,0,Thumb16,9456,"mov r4,#0xf0"
+V6,V8,0,Thumb16,9456,"movs r4,#0xf0"
 V4,V8,0,Arm,3768582145,"adc r0,r0,r1"
 V4,V8,0,Arm,3928473600,b 0x9f0008
 V4,V8,0,Thumb16,56584,ble 0x14
@@ -36,13 +38,11 @@ V4,V8,0,Thumb16,18176,bx r0
 V4,V8,0,Thumb16,18184,bx r1
 V4,V8,0,Thumb16,18192,bx r2
 V4,V8,0,Thumb16,18288,bx lr
-V4,V8,0,Thumb16,9456,"mov r4,#0xf0"
 V5,V8,0,Arm,3657433091,ble 0x14
 V5,V8,0,Arm,3778019088,bx r0
 V5,V8,0,Arm,3778019089,bx r1
 V5,V8,0,Arm,3778019090,bx r2
 V5,V8,0,Arm,3778019102,bx lr
-V5,V8,0,Arm,3818930416,"mov r4,#0xf0"
 V4,V5,0,Arm,3785408512,"mov r12,r0"
 V6,V8,0,Arm,3785408512,"cpy r12,r0"
 V6,V8,0,Arm,3874426994,"uxtb r1,r2"

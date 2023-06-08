@@ -54,9 +54,7 @@ impl From<InstructionSerialized> for Instruction {
     }
 }
 
-struct TestsFromFile<R>(
-    csv::DeserializeRecordsIntoIter<R, InstructionSerialized>,
-);
+struct TestsFromFile<R>(csv::DeserializeRecordsIntoIter<R, InstructionSerialized>);
 impl<R: Read> Iterator for TestsFromFile<R> {
     type Item = csv::Result<Instruction>;
 
@@ -64,19 +62,11 @@ impl<R: Read> Iterator for TestsFromFile<R> {
         self.0.next().map(|test| test.map(Instruction::from))
     }
 }
-pub fn tests_from_file<R: Read>(
-    file: R,
-) -> impl Iterator<Item = csv::Result<Instruction>> {
-    TestsFromFile(
-        csv::Reader::from_reader(file)
-            .into_deserialize::<InstructionSerialized>(),
-    )
+pub fn tests_from_file<R: Read>(file: R) -> impl Iterator<Item = csv::Result<Instruction>> {
+    TestsFromFile(csv::Reader::from_reader(file).into_deserialize::<InstructionSerialized>())
 }
 
-pub fn tests_instruction_from_file(
-    file: &str,
-    parse: fn(&[u8], u16) -> Option<(u16, String)>,
-) {
+pub fn tests_instruction_from_file(file: &str, parse: fn(&[u8], u16) -> Option<(u16, String)>) {
     let test_file = std::fs::File::open(file).unwrap();
     let instructions = tests_from_file(test_file);
     for instruction in instructions.map(Result::unwrap) {

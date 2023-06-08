@@ -5,9 +5,6 @@ mod test {
 
     #[test]
     fn strlen() {
-        tests_instruction_from_file::<u32>(
-            STRLEN_32_INSTRUCTION_FILE,
-            parse_32bits,
-        )
+        tests_instruction_from_file::<u32>(STRLEN_32_INSTRUCTION_FILE, parse_32bits)
     }
 }

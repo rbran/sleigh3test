@@ -8,4 +8,3 @@ edition = "2021"
 [dependencies]
 pic16c5x = { path = "../../sleigh3rust/pic16c5x" }
 pic_lib = { path = "../pic_lib" }
-sleigh4rust = { path = "../../sleigh4rust", version = "0.1" }

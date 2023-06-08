@@ -31,9 +31,7 @@ impl From<InstructionSerialized> for Instruction {
         }
     }
 }
-struct TestsFromFile<R>(
-    csv::DeserializeRecordsIntoIter<R, InstructionSerialized>,
-);
+struct TestsFromFile<R>(csv::DeserializeRecordsIntoIter<R, InstructionSerialized>);
 impl<R: Read> Iterator for TestsFromFile<R> {
     type Item = csv::Result<Instruction>;
 
@@ -44,19 +42,12 @@ impl<R: Read> Iterator for TestsFromFile<R> {
 
 pub const STRLEN_32_INSTRUCTION_FILE: &str = "../assets/x86/strlen_32.csv";
 pub const STRLEN_64_INSTRUCTION_FILE: &str = "../assets/x86/strlen_64.csv";
-pub fn tests_from_file<R: Read>(
-    file: R,
-) -> impl Iterator<Item = csv::Result<Instruction>> {
-    TestsFromFile(
-        csv::Reader::from_reader(file)
-            .into_deserialize::<InstructionSerialized>(),
-    )
+pub fn tests_from_file<R: Read>(file: R) -> impl Iterator<Item = csv::Result<Instruction>> {
+    TestsFromFile(csv::Reader::from_reader(file).into_deserialize::<InstructionSerialized>())
 }
 
-pub fn tests_instruction_from_file<A>(
-    file: &str,
-    parse: fn(&[u8], A) -> Option<(A, String)>,
-) where
+pub fn tests_instruction_from_file<A>(file: &str, parse: fn(&[u8], A) -> Option<(A, String)>)
+where
     A: TryFrom<u64> + TryInto<u64> + core::fmt::Debug + std::ops::Add,
     u64: TryFrom<A>,
     <A as TryFrom<u64>>::Error: std::fmt::Debug,

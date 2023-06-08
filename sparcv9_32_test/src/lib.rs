@@ -24,18 +24,11 @@ impl<R: Read> Iterator for TestsFromFile<R> {
 }
 
 pub const RANDOM_INSTRUCTION_FILE: &str = "../assets/sparcv9/random_32.csv";
-pub fn tests_from_file<R: Read>(
-    file: R,
-) -> impl Iterator<Item = csv::Result<Instruction>> {
-    TestsFromFile(
-        csv::Reader::from_reader(file).into_deserialize::<Instruction>(),
-    )
+pub fn tests_from_file<R: Read>(file: R) -> impl Iterator<Item = csv::Result<Instruction>> {
+    TestsFromFile(csv::Reader::from_reader(file).into_deserialize::<Instruction>())
 }
 
-pub fn tests_instruction_from_file(
-    file: &str,
-    parse: fn(&[u8], u32) -> Option<(u32, String)>,
-) {
+pub fn tests_instruction_from_file(file: &str, parse: fn(&[u8], u32) -> Option<(u32, String)>) {
     let test_file = std::fs::File::open(file).unwrap();
     let instructions = tests_from_file(test_file);
     for instruction in instructions.map(Result::unwrap) {
